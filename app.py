@@ -6,6 +6,7 @@ from src.pipeline import generate_events, extract_features, detect as detect_v1,
 from src.v2 import make_dataset, train_detector, detect_v2
 from src.v3 import fit_autoencoder, detect_v3, compare
 from src.v5 import benchmark as benchmark_v5, risk_detect as detect_v5
+from src.v5_2 import benchmark as benchmark_v5_2
 from src.cloudtrail_import import extract_unlabeled_windows, MAX_BYTES
 from src.v4 import (baseline, detect as detect_v4, demo as compare_v4,
                     record_review, eligible_benign, verify_ledger,
@@ -58,6 +59,29 @@ if version.startswith("Version 5"):
     st.subheader("Held-out synthetic comparison — final evaluation")
     st.caption("Final evaluation uses disjoint seeds 301–305. Holdout results do not determine the automatic selection.")
     st.dataframe(pd.DataFrame(v5_report["held_out"]).T, use_container_width=True)
+    st.subheader("V5.2 — synthetic robustness evaluation")
+    st.caption("Additional disjoint seeds 401–420; fixed V5.1 model selection. "
+               "Stress scenarios are simulated, not independently sourced cloud attacks.")
+    @st.cache_data(show_spinner="Running V5.2 scenario evaluation...")
+    def get_v5_2_report():
+        return benchmark_v5_2()
+    if st.button("Run V5.2 robustness tests"):
+        st.session_state["show_v5_2"] = True
+    if st.session_state.get("show_v5_2"):
+        robustness = get_v5_2_report()
+        overview = []
+        for scenario_name, comparisons in robustness["scenarios"].items():
+            for name, metrics in comparisons.items():
+                overview.append({"scenario": scenario_name, "mode": name,
+                                 **{k: metrics[k] for k in
+                                    ("tp", "fp", "fn", "tn", "precision", "recall", "f1")},
+                                 "f1_bootstrap_95pct":
+                                     str(metrics["seed_cluster_bootstrap_95pct"]["f1"])})
+        st.dataframe(pd.DataFrame(overview), use_container_width=True)
+        st.download_button("Download V5.2 evaluation JSON",
+                           json.dumps(robustness, indent=2),
+                           "v5_2_robustness.json", "application/json")
+        st.caption(robustness["limitations"])
     st.subheader("Authorized CloudTrail JSON export")
     st.caption("Use only authorized, sanitized exports. Avoid uploading sensitive logs to this public demonstration.")
     uploaded = st.file_uploader("CloudTrail JSON (up to 5 MB)", type=["json"], key="v5_cloudtrail")
