@@ -22,10 +22,18 @@ version=st.sidebar.radio("Detector",["Version 5 — context-aware detection",
 seed=st.sidebar.number_input("Evaluation seed",min_value=0,value=101)
 if version.startswith("Version 5"):
     st.caption("V5: context-aware detection with validation-selected configuration and held-out synthetic benchmarks.")
-    @st.cache_resource
-    def get_v5():
+    @st.cache_resource(show_spinner="Computing V5.1 validation and held-out benchmarks...")
+    def get_v5_1_benchmark(cache_schema="v5.1-selection-audit-1"):
+        # New cache identity prevents a V5 result from being reused by V5.1.
         return baseline()[0], benchmark_v5()
-    v5_bundle, v5_report = get_v5()
+    v5_bundle, v5_report = get_v5_1_benchmark()
+    required_selection_fields = {
+        "selection_policy", "minimum_recall", "eligible_candidate_count",
+        "candidate_count", "validation_by_mode", "candidate_results"
+    }
+    if not required_selection_fields.issubset(v5_report.get("selection", {})):
+        get_v5_1_benchmark.clear()
+        v5_bundle, v5_report = get_v5_1_benchmark()
     choice = v5_report["selection"]
     selected_mode, threshold = choice["selected_mode"], choice["threshold"]
     st.write("Validation-selected configuration:", selected_mode)

@@ -13,5 +13,12 @@ class DashboardTests(unittest.TestCase):
         self.assertIn('st.stop()', source)
         self.assertIn('v5_report["held_out"]', source)
 
+    def test_v5_1_cache_schema_guard(self):
+        source = pathlib.Path("app.py").read_text(encoding="utf-8")
+        self.assertIn("get_v5_1_benchmark", source)
+        self.assertIn("required_selection_fields.issubset", source)
+        self.assertIn("get_v5_1_benchmark.clear()", source)
+        self.assertIn('"selection_policy"', source)
+
 if __name__ == "__main__":
     unittest.main()
