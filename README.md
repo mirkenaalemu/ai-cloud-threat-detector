@@ -63,3 +63,24 @@ python -m streamlit run app.py
 The benchmark writes `results/v2_metrics.json`. In five evaluation seeds, the synthetic benchmark measured 120 TP, 40 FP, 40 FN and 2,764 TN (75% precision and 75% recall). The scenarios were intentionally designed to trigger the rules. **Do not compare the 75% directly with V1's 6.7%: the test datasets differ.**
 
 Next: compare both detectors on the same held-out dataset; test unfamiliar attack patterns, realistic benign bursts, distribution shift and precision-recall tradeoffs. No production claims, real employer logs, or customer adoption claims are justified by this demonstration.
+
+
+## Version 3 — experimental neural learning and human-reviewed adaptation
+
+V3 adds a **small neural autoencoder** implemented with scikit-learn `MLPRegressor` (four inputs, a two-unit hidden bottleneck, four reconstructed outputs). It is a deep-learning-style neural network experiment, **not a large deep network or an LLM**. Its reconstruction error is calibrated on separately generated benign synthetic data. It compares three alert modes on the **same evaluation windows**: rules alone, neural reconstruction anomaly alone, and hybrid OR combination.
+
+```bash
+python -m unittest discover -s tests -v
+python -m src.v3
+python -m streamlit run app.py
+```
+
+**Adaptive learning is review-gated, not autonomous.** `review_gated_retrain` rejects calls without explicit approval, requires at least 100 analyst-reviewed benign feature windows, and creates a **candidate-only** model. It never promotes, persists, or deploys the candidate. The simple `drift_report` is a mean-shift heuristic, not comprehensive drift monitoring. The hosted demo does not collect feedback or automatically retrain.
+
+### V3 limitations and next research steps
+
+- Synthetic data and attack patterns are simplified; the V3 ablation compares methods on the same dataset but does **not** establish generalization to unseen attack families or live AWS traffic.
+- Do not treat neural anomalies as confirmed threats or use this demo for automatic blocking.
+- For genuine adaptive deployment, add authenticated analyst feedback, append-only review records, data governance, holdout evaluation, model registry, rollback, drift monitoring and explicit human promotion.
+- For rigorous model comparison, expand to externally sourced permissible datasets, temporally separated test periods, diverse benign activity, novel attacks, calibration curves, PR-AUC, confidence intervals and ablations.
+- Sources: [scikit-learn Isolation Forest](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html), [TensorFlow autoencoder anomaly tutorial](https://www.tensorflow.org/tutorials/generative/autoencoder), [NIST AI RMF](https://www.nist.gov/itl/ai-risk-management-framework), [NIST AI RMF Measure playbook](https://airc.nist.gov/airmf-resources/playbook/measure/).
