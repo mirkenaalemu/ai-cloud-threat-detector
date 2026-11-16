@@ -38,7 +38,7 @@ def scenario_events(seed, scenario):
         # All eight stealth events in the original dataset remain untouched.
         for event in events:
             if event["principal"].startswith("attack-"):
-                event["time"] = f"2026-02-03T{int(event['event_id'].split('-')[-2]) % 24:02d}:{int(event['event_id'].split('-')[-1])*10:02d}:00+00:00"
+                event["time"] = f"2026-02-03T{(int(event['event_id'].split('-')[-2])*2 + int(event['event_id'].split('-')[-1])//6) % 24:02d}:{(int(event['event_id'].split('-')[-1]) % 6)*10:02d}:00+00:00"
                 # Grouping is still by principal; one event per 10-minute window.
     elif scenario == "volume_shift":
         # Add diverse legitimate activity, without changing threat labels.
