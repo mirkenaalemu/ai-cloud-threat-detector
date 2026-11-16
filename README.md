@@ -115,3 +115,21 @@ The Streamlit page includes a **clearly labeled simulated analyst review workflo
 - Review guidance: [NIST AI RMF](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf), [NIST Measure Playbook](https://airc.nist.gov/airmf-resources/playbook/measure/), [OWASP Secure AI Model Ops](https://cheatsheetseries.owasp.org/cheatsheets/Secure_AI_Model_Ops_Cheat_Sheet.html), [OWASP Data Poisoning](https://owasp.github.io/www-project-machine-learning-security-top-10/docs/ML02_2023-Data_Poisoning_Attack.html).
 
 **NIW evidence caution:** The project is a research prototype. Record actual contributor roles and commit history; do not present work by a third party as the petitioner's independent accomplishment.
+
+
+## V5 research: calibrated contextual detection and offline CloudTrail import
+
+V5 adds an experimental contextual hybrid that requires either a strong rule signal or an ML anomaly accompanied by weak supporting context. It evaluates rules, ML-only, OR hybrid and contextual hybrid on the same scenarios. Detector configuration is selected using separate synthetic validation seeds (151–155) and reported on **untouched synthetic holdout seeds (301–305)**. Selection does not guarantee improved results; inspect the actual metrics before claiming gains.
+
+```bash
+python -m src.v5
+python -m unittest discover -s tests -v
+```
+
+The optional `src/cloudtrail_import.py` parses **authorized, local JSON exports** in CloudTrail Records format, normalizes a small allowlist of event types, and extracts ten-minute windows. It does not fetch AWS data, authenticate, deploy resources, or provide ground-truth attack labels. It has bounded input sizes and basic schema validation. For example:
+
+```bash
+python -m src.cloudtrail_import path/to/authorized-export.json
+```
+
+Next engineering phases: read-only AWS ingestion in a test account; event schema and redaction review; authenticated reviewer identities; durable model registry; threat-diverse independent evaluation; security review and sector-specific pilots. The V5 experiment is an incremental implementation step, not an operational security claim.
