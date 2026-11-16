@@ -1,0 +1,2635 @@
+[
+  {
+    "principal": "user-00",
+    "window": "2026-01-05T09:00:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0004"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-01",
+    "window": "2026-01-05T09:00:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0003"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-02",
+    "window": "2026-01-05T09:00:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0009"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-03",
+    "window": "2026-01-05T09:00:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0001",
+      "e0006"
+    ],
+    "anomaly_score": 0.13467,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-04",
+    "window": "2026-01-05T09:00:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0008"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-06",
+    "window": "2026-01-05T09:00:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0007"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-08",
+    "window": "2026-01-05T09:00:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0005"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-10",
+    "window": "2026-01-05T09:00:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0000",
+      "e0002"
+    ],
+    "anomaly_score": 0.13467,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-00",
+    "window": "2026-01-05T09:10:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0017"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-01",
+    "window": "2026-01-05T09:10:00+00:00",
+    "count": 3,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0011",
+      "e0015",
+      "e0018"
+    ],
+    "anomaly_score": -0.11108,
+    "alert": true,
+    "reasons": [
+      "ML anomaly"
+    ]
+  },
+  {
+    "principal": "user-04",
+    "window": "2026-01-05T09:10:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0010",
+      "e0013"
+    ],
+    "anomaly_score": 0.13467,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-05",
+    "window": "2026-01-05T09:10:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0012"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-06",
+    "window": "2026-01-05T09:10:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0019"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-08",
+    "window": "2026-01-05T09:10:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0014"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-09",
+    "window": "2026-01-05T09:10:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0016"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-02",
+    "window": "2026-01-05T09:20:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0020"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-03",
+    "window": "2026-01-05T09:20:00+00:00",
+    "count": 3,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 3,
+    "label": 0,
+    "event_ids": [
+      "e0025",
+      "e0026",
+      "e0029"
+    ],
+    "anomaly_score": -0.01836,
+    "alert": true,
+    "reasons": [
+      "ML anomaly"
+    ]
+  },
+  {
+    "principal": "user-06",
+    "window": "2026-01-05T09:20:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0024",
+      "e0027"
+    ],
+    "anomaly_score": 0.13467,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-09",
+    "window": "2026-01-05T09:20:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0022",
+      "e0028"
+    ],
+    "anomaly_score": 0.13467,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-10",
+    "window": "2026-01-05T09:20:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0021"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-11",
+    "window": "2026-01-05T09:20:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0023"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-01",
+    "window": "2026-01-05T09:30:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0036"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-02",
+    "window": "2026-01-05T09:30:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0031"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-05",
+    "window": "2026-01-05T09:30:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0034"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-06",
+    "window": "2026-01-05T09:30:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0033",
+      "e0038"
+    ],
+    "anomaly_score": 0.13467,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-08",
+    "window": "2026-01-05T09:30:00+00:00",
+    "count": 3,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 3,
+    "label": 0,
+    "event_ids": [
+      "e0032",
+      "e0035",
+      "e0039"
+    ],
+    "anomaly_score": -0.01836,
+    "alert": true,
+    "reasons": [
+      "ML anomaly"
+    ]
+  },
+  {
+    "principal": "user-10",
+    "window": "2026-01-05T09:30:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0030",
+      "e0037"
+    ],
+    "anomaly_score": 0.13467,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-00",
+    "window": "2026-01-05T09:40:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0040"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-01",
+    "window": "2026-01-05T09:40:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0046"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-02",
+    "window": "2026-01-05T09:40:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0048"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-06",
+    "window": "2026-01-05T09:40:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0043"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-08",
+    "window": "2026-01-05T09:40:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0045",
+      "e0049"
+    ],
+    "anomaly_score": 0.13467,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-10",
+    "window": "2026-01-05T09:40:00+00:00",
+    "count": 3,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 3,
+    "label": 0,
+    "event_ids": [
+      "e0041",
+      "e0042",
+      "e0047"
+    ],
+    "anomaly_score": -0.01836,
+    "alert": true,
+    "reasons": [
+      "ML anomaly"
+    ]
+  },
+  {
+    "principal": "user-11",
+    "window": "2026-01-05T09:40:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0044"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-00",
+    "window": "2026-01-05T09:50:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0050",
+      "e0051"
+    ],
+    "anomaly_score": 0.13467,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-02",
+    "window": "2026-01-05T09:50:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0057"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-04",
+    "window": "2026-01-05T09:50:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0052"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-06",
+    "window": "2026-01-05T09:50:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0058"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-08",
+    "window": "2026-01-05T09:50:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0055"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-09",
+    "window": "2026-01-05T09:50:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0053"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-10",
+    "window": "2026-01-05T09:50:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0056"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-11",
+    "window": "2026-01-05T09:50:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0054",
+      "e0059"
+    ],
+    "anomaly_score": 0.13467,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-01",
+    "window": "2026-01-05T10:00:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0062",
+      "e0065"
+    ],
+    "anomaly_score": 0.13467,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-03",
+    "window": "2026-01-05T10:00:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0064",
+      "e0066"
+    ],
+    "anomaly_score": 0.13467,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-04",
+    "window": "2026-01-05T10:00:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0068"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-05",
+    "window": "2026-01-05T10:00:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0063",
+      "e0067"
+    ],
+    "anomaly_score": 0.13467,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-06",
+    "window": "2026-01-05T10:00:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 1,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0060"
+    ],
+    "anomaly_score": -0.28228,
+    "alert": true,
+    "reasons": [
+      "ML anomaly"
+    ]
+  },
+  {
+    "principal": "user-07",
+    "window": "2026-01-05T10:00:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0061"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-08",
+    "window": "2026-01-05T10:00:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0069"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-00",
+    "window": "2026-01-05T10:10:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0075"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-01",
+    "window": "2026-01-05T10:10:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0076",
+      "e0079"
+    ],
+    "anomaly_score": 0.13467,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-02",
+    "window": "2026-01-05T10:10:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0078"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-06",
+    "window": "2026-01-05T10:10:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0071",
+      "e0073"
+    ],
+    "anomaly_score": 0.13467,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-08",
+    "window": "2026-01-05T10:10:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0077"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-09",
+    "window": "2026-01-05T10:10:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0070"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-10",
+    "window": "2026-01-05T10:10:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0072",
+      "e0074"
+    ],
+    "anomaly_score": 0.13467,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-00",
+    "window": "2026-01-05T10:20:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0081"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-01",
+    "window": "2026-01-05T10:20:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0080"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-02",
+    "window": "2026-01-05T10:20:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0082",
+      "e0084"
+    ],
+    "anomaly_score": 0.13467,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-03",
+    "window": "2026-01-05T10:20:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0083",
+      "e0088"
+    ],
+    "anomaly_score": -0.16971,
+    "alert": true,
+    "reasons": [
+      "ML anomaly"
+    ]
+  },
+  {
+    "principal": "user-04",
+    "window": "2026-01-05T10:20:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0085",
+      "e0086"
+    ],
+    "anomaly_score": 0.13467,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-09",
+    "window": "2026-01-05T10:20:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0089"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-10",
+    "window": "2026-01-05T10:20:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0087"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-01",
+    "window": "2026-01-05T10:30:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0093"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-02",
+    "window": "2026-01-05T10:30:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0092"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-03",
+    "window": "2026-01-05T10:30:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0096",
+      "e0099"
+    ],
+    "anomaly_score": 0.13467,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-06",
+    "window": "2026-01-05T10:30:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0095"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-09",
+    "window": "2026-01-05T10:30:00+00:00",
+    "count": 4,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 4,
+    "label": 0,
+    "event_ids": [
+      "e0091",
+      "e0094",
+      "e0097",
+      "e0098"
+    ],
+    "anomaly_score": -0.20028,
+    "alert": true,
+    "reasons": [
+      "ML anomaly"
+    ]
+  },
+  {
+    "principal": "user-11",
+    "window": "2026-01-05T10:30:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0090"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-00",
+    "window": "2026-01-05T10:40:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0103",
+      "e0109"
+    ],
+    "anomaly_score": 0.13467,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-01",
+    "window": "2026-01-05T10:40:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0104",
+      "e0106"
+    ],
+    "anomaly_score": 0.13467,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-03",
+    "window": "2026-01-05T10:40:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0100"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-04",
+    "window": "2026-01-05T10:40:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0107"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-05",
+    "window": "2026-01-05T10:40:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0102"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-08",
+    "window": "2026-01-05T10:40:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0105"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-10",
+    "window": "2026-01-05T10:40:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0101"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-11",
+    "window": "2026-01-05T10:40:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0108"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-00",
+    "window": "2026-01-05T10:50:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0117"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-01",
+    "window": "2026-01-05T10:50:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0116"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-02",
+    "window": "2026-01-05T10:50:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0111"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-03",
+    "window": "2026-01-05T10:50:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0114"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-04",
+    "window": "2026-01-05T10:50:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0110",
+      "e0113"
+    ],
+    "anomaly_score": 0.13467,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-08",
+    "window": "2026-01-05T10:50:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0115"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-10",
+    "window": "2026-01-05T10:50:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0118"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-11",
+    "window": "2026-01-05T10:50:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0112",
+      "e0119"
+    ],
+    "anomaly_score": 0.13467,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-00",
+    "window": "2026-01-05T11:00:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0122",
+      "e0124"
+    ],
+    "anomaly_score": 0.13467,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-03",
+    "window": "2026-01-05T11:00:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0128"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-05",
+    "window": "2026-01-05T11:00:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0125"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-06",
+    "window": "2026-01-05T11:00:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0127",
+      "e0129"
+    ],
+    "anomaly_score": 0.13467,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-08",
+    "window": "2026-01-05T11:00:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0120",
+      "e0123"
+    ],
+    "anomaly_score": 0.13467,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-10",
+    "window": "2026-01-05T11:00:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0126"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-11",
+    "window": "2026-01-05T11:00:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0121"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-03",
+    "window": "2026-01-05T11:10:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0133",
+      "e0135"
+    ],
+    "anomaly_score": 0.13467,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-04",
+    "window": "2026-01-05T11:10:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0131",
+      "e0137"
+    ],
+    "anomaly_score": 0.13467,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-05",
+    "window": "2026-01-05T11:10:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0134",
+      "e0139"
+    ],
+    "anomaly_score": 0.13467,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-06",
+    "window": "2026-01-05T11:10:00+00:00",
+    "count": 4,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 4,
+    "label": 0,
+    "event_ids": [
+      "e0130",
+      "e0132",
+      "e0136",
+      "e0138"
+    ],
+    "anomaly_score": -0.20028,
+    "alert": true,
+    "reasons": [
+      "ML anomaly"
+    ]
+  },
+  {
+    "principal": "user-00",
+    "window": "2026-01-05T11:20:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0141",
+      "e0146"
+    ],
+    "anomaly_score": 0.13467,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-01",
+    "window": "2026-01-05T11:20:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0144"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-03",
+    "window": "2026-01-05T11:20:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0145"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-04",
+    "window": "2026-01-05T11:20:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0140"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-05",
+    "window": "2026-01-05T11:20:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0142",
+      "e0148"
+    ],
+    "anomaly_score": 0.13467,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-06",
+    "window": "2026-01-05T11:20:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0143"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-09",
+    "window": "2026-01-05T11:20:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0149"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-10",
+    "window": "2026-01-05T11:20:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0147"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-02",
+    "window": "2026-01-05T11:30:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0153"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-04",
+    "window": "2026-01-05T11:30:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0151",
+      "e0157"
+    ],
+    "anomaly_score": 0.13467,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-06",
+    "window": "2026-01-05T11:30:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0152"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-07",
+    "window": "2026-01-05T11:30:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0159"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-08",
+    "window": "2026-01-05T11:30:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0156"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-09",
+    "window": "2026-01-05T11:30:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0155",
+      "e0158"
+    ],
+    "anomaly_score": 0.13467,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-10",
+    "window": "2026-01-05T11:30:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0154"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-11",
+    "window": "2026-01-05T11:30:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0150"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-01",
+    "window": "2026-01-05T11:40:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0163"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-02",
+    "window": "2026-01-05T11:40:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0165"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-03",
+    "window": "2026-01-05T11:40:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0168"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-07",
+    "window": "2026-01-05T11:40:00+00:00",
+    "count": 3,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 3,
+    "label": 0,
+    "event_ids": [
+      "e0166",
+      "e0167",
+      "e0169"
+    ],
+    "anomaly_score": -0.01836,
+    "alert": true,
+    "reasons": [
+      "ML anomaly"
+    ]
+  },
+  {
+    "principal": "user-08",
+    "window": "2026-01-05T11:40:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0160"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-10",
+    "window": "2026-01-05T11:40:00+00:00",
+    "count": 3,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 3,
+    "label": 0,
+    "event_ids": [
+      "e0161",
+      "e0162",
+      "e0164"
+    ],
+    "anomaly_score": -0.01836,
+    "alert": true,
+    "reasons": [
+      "ML anomaly"
+    ]
+  },
+  {
+    "principal": "user-01",
+    "window": "2026-01-05T11:50:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0173"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-06",
+    "window": "2026-01-05T11:50:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0171",
+      "e0177"
+    ],
+    "anomaly_score": 0.13467,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-07",
+    "window": "2026-01-05T11:50:00+00:00",
+    "count": 3,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0172",
+      "e0178",
+      "e0179"
+    ],
+    "anomaly_score": -0.11108,
+    "alert": true,
+    "reasons": [
+      "ML anomaly"
+    ]
+  },
+  {
+    "principal": "user-09",
+    "window": "2026-01-05T11:50:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0175",
+      "e0176"
+    ],
+    "anomaly_score": 0.13467,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-10",
+    "window": "2026-01-05T11:50:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0170",
+      "e0174"
+    ],
+    "anomaly_score": 0.13467,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-03",
+    "window": "2026-01-05T12:00:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0183",
+      "e0185"
+    ],
+    "anomaly_score": 0.13467,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-06",
+    "window": "2026-01-05T12:00:00+00:00",
+    "count": 3,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 3,
+    "label": 0,
+    "event_ids": [
+      "e0187",
+      "e0188",
+      "e0189"
+    ],
+    "anomaly_score": -0.01836,
+    "alert": true,
+    "reasons": [
+      "ML anomaly"
+    ]
+  },
+  {
+    "principal": "user-07",
+    "window": "2026-01-05T12:00:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0181",
+      "e0182"
+    ],
+    "anomaly_score": 0.13467,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-08",
+    "window": "2026-01-05T12:00:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0184"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-10",
+    "window": "2026-01-05T12:00:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0180"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-11",
+    "window": "2026-01-05T12:00:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0186"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-00",
+    "window": "2026-01-05T12:10:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0196",
+      "e0199"
+    ],
+    "anomaly_score": 0.13467,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-02",
+    "window": "2026-01-05T12:10:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0198"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-03",
+    "window": "2026-01-05T12:10:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0195"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-04",
+    "window": "2026-01-05T12:10:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0192"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-06",
+    "window": "2026-01-05T12:10:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0191"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-08",
+    "window": "2026-01-05T12:10:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0193"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-09",
+    "window": "2026-01-05T12:10:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0194"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-11",
+    "window": "2026-01-05T12:10:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0190",
+      "e0197"
+    ],
+    "anomaly_score": 0.13467,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-00",
+    "window": "2026-01-05T12:20:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0207"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-02",
+    "window": "2026-01-05T12:20:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0202"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-04",
+    "window": "2026-01-05T12:20:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0205",
+      "e0206"
+    ],
+    "anomaly_score": 0.13467,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-05",
+    "window": "2026-01-05T12:20:00+00:00",
+    "count": 3,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 3,
+    "label": 0,
+    "event_ids": [
+      "e0203",
+      "e0204",
+      "e0208"
+    ],
+    "anomaly_score": -0.01836,
+    "alert": true,
+    "reasons": [
+      "ML anomaly"
+    ]
+  },
+  {
+    "principal": "user-09",
+    "window": "2026-01-05T12:20:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0200"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-10",
+    "window": "2026-01-05T12:20:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0201",
+      "e0209"
+    ],
+    "anomaly_score": 0.13467,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-01",
+    "window": "2026-01-05T12:30:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0219"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-03",
+    "window": "2026-01-05T12:30:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0210",
+      "e0213"
+    ],
+    "anomaly_score": 0.13467,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-04",
+    "window": "2026-01-05T12:30:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0216",
+      "e0217"
+    ],
+    "anomaly_score": 0.13467,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-05",
+    "window": "2026-01-05T12:30:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0214"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-06",
+    "window": "2026-01-05T12:30:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0218"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-07",
+    "window": "2026-01-05T12:30:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0212"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-09",
+    "window": "2026-01-05T12:30:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0211"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-11",
+    "window": "2026-01-05T12:30:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0215"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-00",
+    "window": "2026-01-05T12:40:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0225"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-01",
+    "window": "2026-01-05T12:40:00+00:00",
+    "count": 3,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 3,
+    "label": 0,
+    "event_ids": [
+      "e0220",
+      "e0224",
+      "e0226"
+    ],
+    "anomaly_score": -0.01836,
+    "alert": true,
+    "reasons": [
+      "ML anomaly"
+    ]
+  },
+  {
+    "principal": "user-08",
+    "window": "2026-01-05T12:40:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0223"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-09",
+    "window": "2026-01-05T12:40:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0222"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-10",
+    "window": "2026-01-05T12:40:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0221",
+      "e0227"
+    ],
+    "anomaly_score": 0.13467,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-11",
+    "window": "2026-01-05T12:40:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0228",
+      "e0229"
+    ],
+    "anomaly_score": 0.13467,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-00",
+    "window": "2026-01-05T12:50:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0236"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-01",
+    "window": "2026-01-05T12:50:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0233"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-02",
+    "window": "2026-01-05T12:50:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0237"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-03",
+    "window": "2026-01-05T12:50:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0234"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-04",
+    "window": "2026-01-05T12:50:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0232",
+      "e0238"
+    ],
+    "anomaly_score": 0.13467,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-07",
+    "window": "2026-01-05T12:50:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0231"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-09",
+    "window": "2026-01-05T12:50:00+00:00",
+    "count": 2,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 2,
+    "label": 0,
+    "event_ids": [
+      "e0230",
+      "e0235"
+    ],
+    "anomaly_score": 0.13467,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "user-11",
+    "window": "2026-01-05T12:50:00+00:00",
+    "count": 1,
+    "failed_logins": 0,
+    "privileged_changes": 0,
+    "distinct_ips": 1,
+    "label": 0,
+    "event_ids": [
+      "e0239"
+    ],
+    "anomaly_score": 0.16236,
+    "alert": false,
+    "reasons": []
+  },
+  {
+    "principal": "suspicious-actor",
+    "window": "2026-01-05T13:00:00+00:00",
+    "count": 36,
+    "failed_logins": 24,
+    "privileged_changes": 12,
+    "distinct_ips": 3,
+    "label": 1,
+    "event_ids": [
+      "e0240",
+      "e0241",
+      "e0242",
+      "e0243",
+      "e0244",
+      "e0245",
+      "e0246",
+      "e0247",
+      "e0248",
+      "e0249",
+      "e0250",
+      "e0251",
+      "e0252",
+      "e0253",
+      "e0254",
+      "e0255",
+      "e0256",
+      "e0257",
+      "e0258",
+      "e0259",
+      "e0260",
+      "e0261",
+      "e0262",
+      "e0263",
+      "e0264",
+      "e0265",
+      "e0266",
+      "e0267",
+      "e0268",
+      "e0269",
+      "e0270",
+      "e0271",
+      "e0272",
+      "e0273",
+      "e0274",
+      "e0275"
+    ],
+    "anomaly_score": -0.2168,
+    "alert": true,
+    "reasons": [
+      "multiple failed logins",
+      "repeated privileged changes",
+      "high event volume",
+      "ML anomaly"
+    ]
+  }
+]
