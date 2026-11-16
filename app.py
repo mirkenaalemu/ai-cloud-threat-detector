@@ -5,6 +5,8 @@ import streamlit as st
 from src.pipeline import generate_events, extract_features, detect as detect_v1, evaluate
 from src.v2 import make_dataset, train_detector, detect_v2
 from src.v3 import fit_autoencoder, detect_v3, compare
+from src.v5 import benchmark as benchmark_v5, risk_detect as detect_v5
+from src.cloudtrail_import import extract_unlabeled_windows, MAX_BYTES
 from src.v4 import (baseline, detect as detect_v4, demo as compare_v4,
                     record_review, eligible_benign, verify_ledger,
                     build_candidate, promote, rollback)
@@ -12,12 +14,56 @@ from src.v4 import (baseline, detect as detect_v4, demo as compare_v4,
 st.set_page_config(page_title="AI Cloud Threat Detector", layout="wide")
 st.title("AI Cloud Threat Detector — Synthetic Research Prototype")
 st.warning("Synthetic-data research demo only. Not a production security monitor, authenticated analyst system or real-world validation.")
-version=st.sidebar.radio("Detector",["Version 4 — safe adaptive learning demo",
+version=st.sidebar.radio("Detector",["Version 5 — context-aware detection",
+                                    "Version 4 — safe adaptive learning demo",
                                     "Version 3 — experimental neural model",
                                     "Version 2 — evidence-gated",
                                     "Version 1 — baseline"])
 seed=st.sidebar.number_input("Evaluation seed",min_value=0,value=101)
-if version.startswith("Version 4"):
+if version.startswith("Version 5"):
+    st.caption("V5: context-aware detection with validation-selected configuration and held-out synthetic benchmarks.")
+    @st.cache_resource
+    def get_v5():
+        return baseline()[0], benchmark_v5()
+    v5_bundle, v5_report = get_v5()
+    choice = v5_report["selection"]
+    selected_mode, threshold = choice["selected_mode"], choice["threshold"]
+    st.write("Validation-selected configuration:", selected_mode)
+    mode = st.sidebar.selectbox("V5 detection mode", ["selected", "rules", "ml", "or", "contextual"])
+    actual_mode = selected_mode if mode == "selected" else mode
+    st.subheader("Held-out synthetic comparison")
+    st.caption("Configuration selected on seeds 151–155; final evaluation uses disjoint seeds 301–305.")
+    st.dataframe(pd.DataFrame(v5_report["held_out"]).T, use_container_width=True)
+    st.subheader("Authorized CloudTrail JSON export")
+    st.caption("Use only authorized, sanitized exports. Avoid uploading sensitive logs to this public demonstration.")
+    uploaded = st.file_uploader("CloudTrail JSON (up to 5 MB)", type=["json"], key="v5_cloudtrail")
+    imported = uploaded is not None
+    if imported:
+        if uploaded.size > MAX_BYTES:
+            st.error("File exceeds 5 MB.")
+            st.stop()
+        try:
+            source_rows = extract_unlabeled_windows(uploaded.getvalue())
+        except (ValueError, KeyError, TypeError, UnicodeDecodeError, json.JSONDecodeError) as exc:
+            st.error(f"Invalid or unsupported CloudTrail export: {exc}")
+            st.stop()
+        if not source_rows:
+            st.warning("No supported CloudTrail events found.")
+            st.stop()
+    else:
+        source_rows = extract_features(make_dataset(seed=int(seed)))
+    rows = detect_v5(source_rows, v5_bundle, threshold, actual_mode)
+    if imported:
+        st.subheader("Imported event detections")
+        st.metric("Windows", len(rows))
+        st.metric("Alerts", sum(r["alert"] for r in rows))
+        st.dataframe(pd.DataFrame([{k:v for k,v in r.items() if k != "event_ids"}
+                                    for r in rows if r["alert"]]), use_container_width=True)
+        st.download_button("Download detections", json.dumps(rows, indent=2),
+                           "cloudtrail_detections.json", "application/json")
+        st.caption("Imported events have no verified attack labels; precision and recall are not calculated.")
+        st.stop()
+elif version.startswith("Version 4"):
     st.caption("V4: stable Isolation Forest with human-approval workflow simulation, model gates and in-session rollback. No autonomous retraining.")
     @st.cache_resource
     def get_v4():
