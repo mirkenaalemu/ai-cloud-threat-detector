@@ -133,3 +133,18 @@ python -m src.cloudtrail_import path/to/authorized-export.json
 ```
 
 Next engineering phases: read-only AWS ingestion in a test account; event schema and redaction review; authenticated reviewer identities; durable model registry; threat-diverse independent evaluation; security review and sector-specific pilots. The V5 experiment is an incremental implementation step, not an operational security claim.
+
+
+## V5.2 — synthetic robustness and reproducibility study
+
+V5.2 freezes the detector selected by V5.1 validation seeds 151–155 and evaluates it against rules-only detection using **new, disjoint synthetic seeds 401–420**. It does not retune thresholds on the new data.
+
+Four deterministic scenario families are tested: original synthetic patterns, benign administrative bursts, dispersed low-and-slow malicious actions, and shifted legitimate traffic volume. Metrics include TP/FP/FN/TN, precision, recall, F1, per-seed results, and seed-cluster bootstrap percentile intervals (1,000 resamples, fixed random seed). Intervals measure only variation among synthetic seeds; they are **not estimates of performance in operational cloud environments**.
+
+```bash
+python -m unittest discover -s tests -v
+python -m src.v5_2
+python -m streamlit run app.py
+```
+
+The command saves `results/v5_2_robustness.json`. In the V5 dashboard, click **Run V5.2 robustness tests** to view the comparison and download the JSON. The robustness results are separate from the original V5.1 validation and holdout. Review the results before claiming improvements: some perturbations may reveal more false positives or missed attacks. The low-and-slow test re-times the existing generator's attacks; it is not a new independent attack family. For next-phase evaluation, obtain permitted independent datasets and expert-validated labels, plus authentication and a secured cloud ingestion test environment.
