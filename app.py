@@ -7,6 +7,7 @@ from src.v2 import make_dataset, train_detector, detect_v2
 from src.v3 import fit_autoencoder, detect_v3, compare
 from src.v5 import benchmark as benchmark_v5, risk_detect as detect_v5
 from src.v5_2 import benchmark as benchmark_v5_2
+from src.v5_3 import benchmark as benchmark_v5_3
 from src.cloudtrail_import import extract_unlabeled_windows, MAX_BYTES
 from src.v4 import (baseline, detect as detect_v4, demo as compare_v4,
                     record_review, eligible_benign, verify_ledger,
@@ -82,6 +83,36 @@ if version.startswith("Version 5"):
                            json.dumps(robustness, indent=2),
                            "v5_2_robustness.json", "application/json")
         st.caption(robustness["limitations"])
+    st.subheader("V5.3 — temporal behavior study")
+    st.caption("24-hour per-principal evidence accumulation. Validation seeds 501–505; separate final evaluation seeds 601–620. All scenarios are synthetic.")
+    @st.cache_data(show_spinner="Evaluating V5.3 temporal behavior scenarios...")
+    def get_v5_3_report():
+        return benchmark_v5_3()
+    if st.button("Run V5.3 temporal evaluation"):
+        st.session_state["show_v5_3"] = True
+    if st.session_state.get("show_v5_3"):
+        temporal_report = get_v5_3_report()
+        st.write("Validation decision:", temporal_report["selection"]["reason"])
+        st.write("Selected temporal threshold:", temporal_report["selection"]["selected_threshold"])
+        with st.expander("Inspect V5.3 validation candidates"):
+            st.dataframe(pd.DataFrame([
+                {"threshold": c["threshold"], "eligible": c["eligible"],
+                 "baseline_f1": c["baseline"]["f1"],
+                 "temporal_f1": c["temporal"]["f1"],
+                 "temporal_recall": c["temporal"]["recall"],
+                 "temporal_fp": c["temporal"]["fp"]}
+                for c in temporal_report["selection"]["candidates"]]), use_container_width=True)
+        overview = []
+        for scenario_name, comparisons in temporal_report["results"].items():
+            for name, values in comparisons.items():
+                overview.append({"scenario": scenario_name, "mode": name,
+                                 **{key: values[key] for key in
+                                    ("tp", "fp", "fn", "tn", "precision", "recall", "f1")}})
+        st.dataframe(pd.DataFrame(overview), use_container_width=True)
+        st.download_button("Download V5.3 evaluation JSON",
+                           json.dumps(temporal_report, indent=2),
+                           "v5_3_temporal.json", "application/json")
+        st.caption(temporal_report["limitations"])
     st.subheader("Authorized CloudTrail JSON export")
     st.caption("Use only authorized, sanitized exports. Avoid uploading sensitive logs to this public demonstration.")
     uploaded = st.file_uploader("CloudTrail JSON (up to 5 MB)", type=["json"], key="v5_cloudtrail")
