@@ -84,3 +84,34 @@ python -m streamlit run app.py
 - For genuine adaptive deployment, add authenticated analyst feedback, append-only review records, data governance, holdout evaluation, model registry, rollback, drift monitoring and explicit human promotion.
 - For rigorous model comparison, expand to externally sourced permissible datasets, temporally separated test periods, diverse benign activity, novel attacks, calibration curves, PR-AUC, confidence intervals and ablations.
 - Sources: [scikit-learn Isolation Forest](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.IsolationForest.html), [TensorFlow autoencoder anomaly tutorial](https://www.tensorflow.org/tutorials/generative/autoencoder), [NIST AI RMF](https://www.nist.gov/itl/ai-risk-management-framework), [NIST AI RMF Measure playbook](https://airc.nist.gov/airmf-resources/playbook/measure/).
+
+
+## Version 4 — controlled adaptive learning research demonstration
+
+V4 adds `src/v4.py`, a **synthetic-only** model lifecycle proof of concept. It uses a stable Isolation Forest baseline (not V3's numerically unstable neural training) and demonstrates:
+
+1. **Review provenance:** append-only-in-memory, hash-chained review records with reviewer ID, decision, rationale and timestamp. Hashes detect accidental changes but are **not signatures, authentication, or tamper-proof storage**.
+2. **Conservative feedback eligibility:** at least two distinct reviewers must mark a window benign; any threat or uncertain vote excludes it. Duplicate reviewer votes are rejected. This is a basic poisoning safeguard, not a comprehensive defense.
+3. **Candidate training:** explicitly approved, doubly reviewed benign windows only, with basic outlier filtering; calibration uses a separate synthetic benign sample. Training does **not** deploy the candidate.
+4. **Independent evaluation gate:** candidate and active model are tested on identical held-out synthetic seeds, with predefined recall, precision and false-positive constraints. A failing candidate cannot be promoted.
+5. **Independent approval and rollback:** promotion requires a different approver from the training approver; prior model remains available for in-session rollback.
+6. **Ablation:** rules-only, ML-only and hybrid are evaluated on identical synthetic windows.
+
+```bash
+python -m unittest discover -s tests -v
+python -m src.v4
+python -m streamlit run app.py
+```
+
+The Streamlit page includes a **clearly labeled simulated analyst review workflow**. Reviewer identities are illustrative strings; no login, authorization, persistent audit database, real analyst validation, automated learning, or real-world cloud monitoring exists. In-memory session state is reset on restart. Do not use the public demo to collect sensitive logs or real analyst feedback.
+
+### Known limitations and research priorities
+
+- The hash chain alone cannot prevent a privileged user from rewriting the entire history; real deployment needs authenticated identities, immutable audit storage and access controls.
+- Basic filtering and two-person agreement reduce some poisoning risks but cannot establish that training examples are truly benign.
+- The holdout is still synthetic and drawn from the same scenario generator. Improve temporal separation, attack diversity, independent datasets and confidence intervals before any effectiveness claims.
+- V3's numerical warnings are **not fixed by V4**; V4 deliberately uses Isolation Forest to isolate the adaptive workflow from that instability.
+- Model promotion/rollback is **in-memory only**; production needs signed model artifacts, a durable registry, approval policy enforcement and monitored rollback.
+- Review guidance: [NIST AI RMF](https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-1.pdf), [NIST Measure Playbook](https://airc.nist.gov/airmf-resources/playbook/measure/), [OWASP Secure AI Model Ops](https://cheatsheetseries.owasp.org/cheatsheets/Secure_AI_Model_Ops_Cheat_Sheet.html), [OWASP Data Poisoning](https://owasp.github.io/www-project-machine-learning-security-top-10/docs/ML02_2023-Data_Poisoning_Attack.html).
+
+**NIW evidence caution:** The project is a research prototype. Record actual contributor roles and commit history; do not present work by a third party as the petitioner's independent accomplishment.
