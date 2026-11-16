@@ -36,38 +36,59 @@ def aggregate(bundle, seeds, threshold, mode):
 
 def select_configuration(bundle, selection_seeds=(151,152,153,154,155),
                          minimum_recall=0.75):
-    """Select on validation scenarios, never on final evaluation scenarios.
+    """Choose a detector using validation data only; report the decision.
 
-    Conservative fallback is rules-only when no hybrid candidate dominates it.
+    Final held-out test seeds are never accessed here. Prefer highest
+    validation F1, then recall, then fewer false positives. Rules remain
+    eligible; there is no forced preference for the contextual model.
     """
     if not selection_seeds:
         raise ValueError("Selection seeds required")
+    if len(set(selection_seeds)) != len(selection_seeds):
+        raise ValueError("Selection seeds must be unique")
     reference = aggregate(bundle, selection_seeds, bundle["threshold"], "rules")
-    # Candidate thresholds derived only from independent benign calibration
-    # would be ideal; this search uses validation labels for model selection,
-    # with a completely separate final holdout.
-    calibration_rows = extract_features(make_dataset(seed=149))
-    candidate_scores = sorted(set(float(x) for x in score(calibration_rows, bundle)))
-    quantiles = (0.005, 0.01, 0.02, 0.04, 0.08, 0.12)
+    # Generate thresholds using validation anomaly-score distributions.
+    # Labels are used only for choosing the validation winner.
     import numpy as np
-    thresholds = [float(np.quantile(candidate_scores, q)) for q in quantiles]
-    candidates = [{"mode":"rules","threshold":bundle["threshold"],"metrics":reference}]
+    validation_rows = []
+    for seed in selection_seeds:
+        validation_rows.extend(extract_features(make_dataset(seed=seed)))
+    validation_scores = np.asarray(score(validation_rows, bundle), dtype=float)
+    if not np.isfinite(validation_scores).all():
+        raise ValueError("Non-finite validation anomaly scores")
+    quantiles = (0.005, 0.01, 0.02, 0.04, 0.08, 0.12, 0.20, 0.30)
+    thresholds = sorted(set([float(bundle["threshold"])] +
+                            [float(np.quantile(validation_scores, q)) for q in quantiles]))
+    candidates = [{"mode": "rules", "threshold": float(bundle["threshold"]),
+                   "metrics": reference, "eligible": True}]
+    required_recall = max(minimum_recall, reference["recall"])
     for threshold in thresholds:
-        for mode in ("contextual","or"):
-            metrics = aggregate(bundle,selection_seeds,threshold,mode)
-            if metrics["recall"] >= max(minimum_recall, reference["recall"]):
-                candidates.append({"mode":mode,"threshold":threshold,"metrics":metrics})
-    # Prioritize recall, but never increase false alerts relative to rules unless
-    # a real recall improvement compensates. This is a stated engineering choice.
-    def utility(c):
-        m=c["metrics"]
-        return (m["f1"], m["recall"], -m["fp"])
-    winner=max(candidates,key=utility)
-    return {"selected_mode":winner["mode"],"threshold":winner["threshold"],
-            "selection_metrics":winner["metrics"],
-            "reference_metrics":reference,
-            "selection_seeds":list(selection_seeds),
-            "candidate_count":len(candidates)}
+        for mode in ("ml", "or", "contextual"):
+            metrics = aggregate(bundle, selection_seeds, threshold, mode)
+            candidates.append({"mode": mode, "threshold": threshold,
+                               "metrics": metrics,
+                               "eligible": metrics["recall"] >= required_recall})
+    eligible = [c for c in candidates if c["eligible"]]
+    def utility(candidate):
+        m = candidate["metrics"]
+        # Round only for stable near-ties; do not favor any named model.
+        return (round(m["f1"], 12), round(m["recall"], 12), -m["fp"])
+    winner = max(eligible, key=utility)
+    validation_by_mode = {
+        mode: aggregate(bundle, selection_seeds, winner["threshold"], mode)
+        for mode in ("rules", "ml", "or", "contextual")
+    }
+    return {"selected_mode": winner["mode"], "threshold": winner["threshold"],
+            "selection_metrics": winner["metrics"],
+            "reference_metrics": reference,
+            "validation_by_mode": validation_by_mode,
+            "selection_seeds": list(selection_seeds),
+            "minimum_recall": float(required_recall),
+            "selection_policy": "Highest validation F1 among candidates meeting rules-baseline recall; tie-break on recall and fewer false positives.",
+            "candidate_count": len(candidates),
+            "eligible_candidate_count": len(eligible),
+            "candidate_results": candidates}
+
 
 def benchmark(selection_seeds=(151,152,153,154,155),
               test_seeds=(301,302,303,304,305)):

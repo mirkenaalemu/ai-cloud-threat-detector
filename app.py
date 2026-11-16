@@ -29,10 +29,26 @@ if version.startswith("Version 5"):
     choice = v5_report["selection"]
     selected_mode, threshold = choice["selected_mode"], choice["threshold"]
     st.write("Validation-selected configuration:", selected_mode)
+    st.caption(choice["selection_policy"])
+    st.caption(f"Validation recall floor: {choice['minimum_recall']:.1%}; "
+               f"eligible candidates: {choice['eligible_candidate_count']} of {choice['candidate_count']}.")
     mode = st.sidebar.selectbox("V5 detection mode", ["selected", "rules", "ml", "or", "contextual"])
     actual_mode = selected_mode if mode == "selected" else mode
-    st.subheader("Held-out synthetic comparison")
-    st.caption("Configuration selected on seeds 151–155; final evaluation uses disjoint seeds 301–305.")
+    if mode != "selected":
+        st.info(f"Manual demonstration mode: {mode}. Automatic validation selection remains {selected_mode}.")
+    st.subheader("Validation comparison — model selection")
+    st.caption("Validation seeds 151–155 are used to select a configuration. These metrics are distinct from the final holdout.")
+    st.dataframe(pd.DataFrame(choice["validation_by_mode"]).T, use_container_width=True)
+    with st.expander("Inspect threshold candidates and selection decision"):
+        candidates = pd.DataFrame([
+            {"mode": c["mode"], "threshold": c["threshold"],
+             "eligible": c["eligible"], **c["metrics"]}
+            for c in choice["candidate_results"]])
+        st.dataframe(candidates.sort_values(["f1", "recall"], ascending=False),
+                     use_container_width=True)
+        st.caption("Candidate thresholds and model choice use validation data only.")
+    st.subheader("Held-out synthetic comparison — final evaluation")
+    st.caption("Final evaluation uses disjoint seeds 301–305. Holdout results do not determine the automatic selection.")
     st.dataframe(pd.DataFrame(v5_report["held_out"]).T, use_container_width=True)
     st.subheader("Authorized CloudTrail JSON export")
     st.caption("Use only authorized, sanitized exports. Avoid uploading sensitive logs to this public demonstration.")
